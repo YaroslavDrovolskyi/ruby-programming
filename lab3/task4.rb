@@ -34,7 +34,7 @@ def subtask_2(x, eps)
 end
 
 
-def subtask_3(x, eps)
+def subtask_3(eps)
     sum = 0
     n = 1
     loop do
@@ -50,7 +50,20 @@ end
 
 
 def main
-    puts subtask_1(0.00005)
+    x = 10
+    eps = 0.00005
+    puts "1) #{subtask_1(eps)}"
+    
+    # 2nd subtask
+    ln = Math.log(x)
+    sum = subtask_2(x, eps)
+    delta = (ln - sum).abs
+    puts "\n2)"
+    puts "ln(#{x}) = #{ln}"
+    puts "  sum = #{sum}"
+    puts "ln - sum = #{ln - sum}"
+
+    puts "3) #{subtask_3(eps)}"
 end
 
 
