@@ -51,7 +51,7 @@ end
 
 def main
     x = 10
-    eps = 0.00005
+    eps = 0.00001
     puts "1) #{subtask_1(eps)}"
     
     # 2nd subtask
@@ -60,7 +60,7 @@ def main
     delta = (ln - sum).abs
     puts "\n2)"
     puts "ln(#{x}) = #{ln}"
-    puts "  sum = #{sum}"
+    puts "   sum = #{sum}"
     puts "ln - sum = #{ln - sum}"
 
     puts "3) #{subtask_3(eps)}"

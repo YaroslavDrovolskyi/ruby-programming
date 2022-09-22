@@ -33,11 +33,11 @@ class Point
         return '(' + @x.to_s + '; ' + @y.to_s + ') '
     end
 
-    def get_x
+    def x
         return @x
     end
 
-    def get_y
+    def y
         return @y
     end
 end

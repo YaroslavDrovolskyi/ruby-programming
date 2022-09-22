@@ -12,7 +12,7 @@ def subtask_1(x)
 end
 
 def subtask_5(n)
-    if (n < 1) then return nil end
+    if (n < 1) then raise 'n can\'t be < 1' end
 
     if (n == 1) then return Math.sqrt(2)
     else return Math.sqrt(2 + subtask_5(n - 1)) end
