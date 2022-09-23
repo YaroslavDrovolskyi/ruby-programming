@@ -1,4 +1,5 @@
 def factorial(n)
+    if (n < 0) then raise 'n can\'t be < 0' end
     n > 1 ? n * factorial(n - 1) : 1
 end
 
@@ -24,7 +25,10 @@ def subtask_2(x, eps)
     n = 0
     loop do
         addition = ((x-1)**(2*n + 1)).to_f/((2*n + 1)*(x+1)**(2*n + 1))
-        if addition < eps
+        # eps is precision of result, not of sum, so: 
+        # result = 2*sum => result_eps = 2*sum_eps
+        # => sum_eps = result_eps/2
+        if addition < eps/2
             return 2*sum
         else
             sum += addition
