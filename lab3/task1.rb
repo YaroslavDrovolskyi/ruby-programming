@@ -2,7 +2,7 @@ def subtask_1(a, b, c, x, y, z)
     result = []
     
     result.append(!(a || b) && (a && !b))
-    result.append((z != y) && (6 >= y) && a || b && c && (x>=1.5))
+    result.append((z != y) && (6 >= y) && a || b && c && (x>=1.5)) # corrected typo in task
     result.append((8 - x * 2 <= z) && (x**2 <= y**2) || (z >= 15))
     result.append((x > 0) && (y < 0) || (z >= (x*y - y/x + (-z))))
     result.append(!(a || b && !(c || (!a || b))))
