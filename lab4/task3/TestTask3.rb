@@ -14,7 +14,7 @@ class TestTask3 < Minitest::Unit::TestCase
     end
 
 
-    # It will return crrect vector-solution for n and k
+    # It will return correct vector-solution for n and k
     # correct solution is calculated based on common solution of system with parameter k
     def getRightSolution(n, k)
         case n

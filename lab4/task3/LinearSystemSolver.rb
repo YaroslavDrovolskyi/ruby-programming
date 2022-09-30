@@ -3,7 +3,6 @@ require_relative 'Matrix.rb'
 
 class LinearSystemSolver
     def self.solve(matrix, free_vector, n)
-        if (n < 3 || n > 9) then raise "n must be in interval [3;9]" end
         if (free_vector.size != matrix.column_count) then raise "vector and matrix must have same size" end
     
         # check if system has one solution

@@ -13,7 +13,7 @@ def main
 
     puts "\n\nA = "
     matrix.print
-    print "b = ", vector, "\n\n\n"
+    puts "b = ", vector, "\n\n"
 
     print "Solution: ", LinearSystemSolver.solve(matrix, vector, n)
 end

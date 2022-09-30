@@ -36,8 +36,12 @@ end
 
 def main
     matrix = Matrix.randSquareMatrix(8)
+    number = 2
+    print "A = "
     matrix.print
-    matrix.multiply(2)
+
+    print "#{number} * A = "
+    matrix.multiply(number)
     matrix.print
 end
 

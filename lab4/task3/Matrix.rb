@@ -10,7 +10,7 @@ class  Matrix
     end
 
     def Matrix.generateMatrix(k, n)
-        if (n <= 0) then raise "Size of matrix can't be <= 0" end
+        if (n < 3 || n > 9) then raise "Size of matrix must be in interval [3;9]" end
         if (k <= 0) then raise "k can't be <= 0" end
 
         # generate two-dimensional array
