@@ -5,7 +5,6 @@ class  Matrix
         @rows[i][j] = value
     end
 
-
     def print()
         puts "\n", to_a().map(&:inspect), "\n"
     end
@@ -14,8 +13,10 @@ class  Matrix
         if (n <= 0) then raise "Size of matrix can't be <= 0" end
         if (k <= 0) then raise "k can't be <= 0" end
 
+        # generate two-dimensional array
         array = Array.new(n){Array.new(n)}
 
+        # fill this two-dimensional array
         for i in 0...n 
             for j in 0...n
                 if i == j 
@@ -46,8 +47,6 @@ class  Matrix
         end
     end
 
-   
-
     def trasformToUpperTriangle!
         n = self.row_count
         for i in 0...(self.row_count)
@@ -69,56 +68,3 @@ class  Matrix
         end
     end
 end
-
-def solveLinearSystem(matrix, free_vector, n)
-    if (n < 3 || n > 9) then raise "n must be in interval [3;9]" end
-    # check if system has one solution
-    expanded_matrix = Matrix[*matrix.clone.appendColumn(free_vector)]
-    rank = matrix.rank
-    if (rank == expanded_matrix.rank)
-       if rank < n
-            arise "Linear system is indefinite, and has an infinite numebr of solutions"
-       end
-    else
-        arise "Linear system is incompatible and has no solutions"
-    end
-
-=begin
-    expanded_matrix.each{|e|
-        e = e.to_r
-    }
-=end
-
-    expanded_matrix.trasformToUpperTriangle!
-
-    x = Array.new(n, 0)
-
-
-    for i in (n-1).downto(0)
-        sum = 0
-        if (i != n-1)
-            for j in i+1...n
-                sum += expanded_matrix[i, j] * x[j]
-            end
-        end
-        x[i] = expanded_matrix[i, n] - sum
-    end
-
-    return Vector[*x]
-end
-
-
-def main
-    k = 5
-    for n in 3..9
-        matrix = Matrix.generateMatrix(k,n)
-        vector = Vector[*(1..n)]
-
-        puts "k = #{k}, n = #{n}\n"
-        matrix.print
-        puts solveLinearSystem(matrix, vector, n)
-    end
-
-end
-
-main
