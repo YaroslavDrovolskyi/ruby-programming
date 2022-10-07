@@ -53,6 +53,9 @@ class TestTask2 < Minitest::Unit::TestCase
     def test_calculate_series_in_interval
         eps = 1e-2
 
+        assert_raises(RuntimeError, "n must be in [10; 58]"){calculate_series_in_interval(0)}
+        assert_raises(RuntimeError, "n must be in [10; 58]"){calculate_series_in_interval(100)}
+
         # n = -1
         expected = [1.11612, 1.24573, 1.39039, 1.55185, 1.73205, 1.93318, 2.15767,
             2.40822, 2.68788, 3]

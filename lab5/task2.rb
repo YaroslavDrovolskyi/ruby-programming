@@ -40,10 +40,10 @@ def main
     puts "\n\nWhen calculate using eps = 1e-3"
     puts calculate_series_in_interval()
 
-    puts "\n\nWhen calculate using from 0 to 10"
+    puts "\n\nWhen calculate sum up to 10-th series member"
     puts calculate_series_in_interval(10)
 
-    puts "\n\nWhen calculate using from 0 to 20"
+    puts "\n\nWhen calculate sum up to 20-th series member"
     puts calculate_series_in_interval(20)
 end
 
