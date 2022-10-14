@@ -1,8 +1,6 @@
 require_relative 'Luggage.rb'
 
 
-
-
 def main
 
     luggages = [
@@ -45,18 +43,6 @@ def main
     puts "e)"
     puts task_e(luggages), "\n"
 end
-
-=begin
-puts  [1, 2, 3, 4, 5].inject(0){|sum, x| sum + x}
-puts  [1, 2, 3, 4, 5].push([5, 10, 15]).push([100, 100, 100]).to_s
-
-for i in 10..9
-    puts "i = #{i}"
-end
-
-puts Luggage.new(5, 10) == Luggage.new(5, 10)
-
-=end
 
 main
 
