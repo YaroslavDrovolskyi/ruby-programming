@@ -1,0 +1,25 @@
+ruby bin\rails server - how to run server
+
+
+ruby bin/rails generate controller Articles index --skip-routes - create controller class
+ruby bin/rails generate model Article title:string body:text - generate model
+ruby bin/rails db:migrate - run migration 
+rails console - start a console
+ruby bin/rails routes - get all routes
+
+, platforms: %i[ mingw mswin x64_mingw jruby ]
+
+Delete generated files
+rails destroy controller Articles - destoys controller and view
+rails destroy model Article
+
+
+
+1. create controller
+2. create routes that leads for contrller methods
+3. create views row each method of controller
+
+4. generate model: ruby bin/rails generate model Luggage things_number:integer weight:decimal
+5. run db:migrate: ruby bin/rails db:migrate
+
+6. READ operation

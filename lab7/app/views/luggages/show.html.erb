@@ -1,0 +1,13 @@
+<h1>Luggage</h1>
+<p>ID: <%= @luggage.id %></p>
+<p>Number of things: <%= @luggage.things_number %></p>
+<p>Weight: <%= @luggage.weight %> kg</p>
+
+
+<ul>
+  <li><%= link_to "Edit", edit_luggage_path(@luggage) %></li>
+  <li><%= link_to "Destroy", luggage_path(@luggage), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %></li>
+</ul>

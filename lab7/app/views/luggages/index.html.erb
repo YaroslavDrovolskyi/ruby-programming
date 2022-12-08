@@ -1,0 +1,24 @@
+<h1>List of all luggages</h1>
+<p> <%= if @luggages.length == 0 then "No luggages" end %> </p>
+<ul>
+  <% @luggages.each do |luggage| %>
+    <li>
+      <%= link_to luggage.id, luggage %>
+    </li>
+  <% end %>
+</ul>
+
+<ul>
+  <li> <%= link_to "Add new luggage", new_luggage_path %> </li>
+  <li> <%= link_to "Run task a (it will redirect you on resulting luggage)", task_a_path %> </li>
+  <li> <%= link_to "Run task b", task_b_path %> </li>
+  <li> <%= link_to "Run task c", task_c_path %> </li>
+  <li> <%= link_to "Run task d", task_d_path %> </li>
+  <li> <%= link_to "Run task e", task_e_path %> </li>
+</ul>
+
+
+
+
+
+

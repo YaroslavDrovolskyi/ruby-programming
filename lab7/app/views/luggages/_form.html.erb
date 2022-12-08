@@ -1,0 +1,21 @@
+<%= form_with model: luggage do |form| %>
+  <div>
+    <%= form.label :things_number %><br>
+    <%= form.text_field :things_number %>
+    <% luggage.errors.full_messages_for(:things_number).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :weight %><br>
+    <%= form.text_field :weight %><br>
+    <% luggage.errors.full_messages_for(:weight).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
